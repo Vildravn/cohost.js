@@ -36,7 +36,8 @@ async function fetch(
     method,
     headers: {
       "Content-Type": "application/json",
-      Cookie: cookies
+      Cookie: cookies,
+      "User-Agent": "cohost.js"
     },
     body: method != "GET" && data ? JSON.stringify(data) : undefined
   });
